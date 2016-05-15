@@ -1,0 +1,84 @@
+/*
+ * This file is part of the lazier.sass npm package. Copyright (C) 2016 and above Shogun <shogun@cowtech.it>.
+ * Licensed under the MIT license, which can be found at http://www.opensource.org/licenses/mit-license.php.
+ */
+
+/*
+ * This file defines a series of mixins to easily use the flexbox CSS module.
+ *
+ * The most common use is to extend a flex-container or a flexbox container and use the flex element class to let a element expand:
+ *
+ *   HTML:
+ *     <div class="container">
+ *       <p class="expand">I will expand</p>
+ *       <a href="#">Delete</a>
+ *     </div>
+ *
+ *   SASS:
+ *     .container
+ *       @extend %flex-row-container
+ *
+ *     .expand
+ *       @extend %flex-element
+ */
+
+=flex-container($direction: column, $type: flex, $align-items: stretch, $justify-content: flex-start, $flex-wrap: nowrap)
+  display: $type
+  flex-direction: $direction
+  align-items: $align-items
+  justify-content: $justify-content
+  flex-wrap: $flex-wrap
+
+  &.hide
+    display: none
+
+=flex-element($size: 1, $shrink: 0, $basis: auto)
+  flex: $size $shrink $basis
+
+  &%hide
+    display: none
+
+%flex-container
+  +flex-container
+
+%flex-row-container
+  +flex-container(row)
+
+  &%with-margin
+    %flex-element
+      margin: 0 1rem
+
+      &:first-of-type
+        margin-left: 0
+
+      &:last-of-type
+        margin-right: 0
+
+%centered-row
+  +flex-container(row, $align-items: center, $justify-content: center)
+
+%centered-column
+  +flex-container($align-items: center, $justify-content: center)
+
+@for $i from 1 through 12
+  %flex-element-#{$i}
+    +flex-element($i)
+
+%flex-element
+  +flex-element
+
+%flex-align-items-center, %vertically-centered
+  align-items: center
+
+%flex-wrap, %wrapped
+  flex-wrap: wrap
+
+%flex-justify-content-center, %horizontally-centered
+  justify-content: center
+
+%both-centered
+  align-items: center
+  justify-content: center
+
+%self-top-centered
+  align-self: flex-start

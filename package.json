@@ -1,0 +1,37 @@
+{
+  "name": "lazier.sass",
+  "version": "1.0.0",
+  "description": "A small set of tiny SASS files to avoid repetitive definitions.",
+  "main": "main.sass",
+  "files": [
+    "main.sass",
+    "modules",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "postpublish": "git push origin --tags && git push origin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShogunPanda/lazier.sass"
+  },
+  "keywords": [
+    "lazier",
+    "ribbons",
+    "sass"
+  ],
+  "author": "Shogun <shogun@cowtech.it>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ShogunPanda/lazier.sass/issues"
+  },
+  "homepage": "https://sw.cowtech.it/lazier.sass",
+  "dependencies": {
+    "normalize.css": ">= 4.1.1",
+    "font-awesome": ">= 4.6.1"
+  },
+  "optionalDependencies": {
+    "node-sass": ">= 3.4.0"
+  }
+}
