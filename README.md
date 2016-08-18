@@ -1,6 +1,5 @@
 # lazier.sass
 
-SOMETHING
 A small set of tiny SASS files to avoid repetitive definitions.
 
 https://sw.cowtech.it/lazier.sass
