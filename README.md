@@ -27,7 +27,7 @@ html
 
 ~~~sass
 // ... other imports before ...
-@import ./node_modules/lazier.sass/main
+@import node_modules/lazier.sass/main
 // ... other imports after ...
 
 // ... other rules ...
@@ -35,9 +35,9 @@ html
 
 ~~~sass
 // ... other imports before ...
-@import ./node_modules/normalize.css/normalize
-@import ./node_modules/lazier.sass/modules/_palette
-@import ./node_modules/ribbon.css/_ribbon
+@import node_modules/normalize.css/normalize
+@import node_modules/lazier.sass/modules/_palette
+@import node_modules/ribbon.css/_ribbon
 // ... other imports after ...
 
 // ... other rules ...
