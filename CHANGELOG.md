@@ -1,3 +1,7 @@
+### 2.0.1 / 2016-12-16
+
+Bugfix.
+
 ### 2.0.0 / 2016-12-16
 
 * Do not include Font-Awesome icons by default, renamed the file as icons-font.
