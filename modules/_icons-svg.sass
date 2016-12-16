@@ -1,0 +1,55 @@
+/*
+ * This file is part of the lazier.sass npm package. Copyright (C) 2016 and above Shogun <shogun@cowtech.it>.
+ * Licensed under the MIT license, which can be found at http://www.opensource.org/licenses/mit-license.php.
+ */
+
+/*
+ * This file defines few classes to use SVG file.
+ *
+ * To show a icon:
+ *
+ *   <svg class="icon icon-$NAME"><use xlink:href="#icon-$NAME"></use></svg>
+ *
+ * Then in the document body you have to insert a svg element which contains all icons definition:
+ *
+ * <svg class="icons-definition" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">',
+ *   <defs>
+ *     <symbol id="icon-music" viewBox="0 0 24 28">
+ *       ...
+ *     </symbol>
+ *   </defs>
+ * </svg>
+ */
+
+ @keyframes icon-spinning
+  0%
+    transform: rotate(0deg)
+
+  100%
+    transform: rotate(359deg)
+
+.icons-definition
+  display: none
+  position: absolute
+  width: 0
+  height: 0
+  overflow: hidden
+
+.icon
+  display: inline-block
+  vertical-align: middle
+  width: 1.0em
+  height: 1.0em
+  stroke-width: 0
+  stroke: currentColor
+  fill: currentColor
+
+.icon-big
+  width: 1.5em
+  height: 1.5em
+
+.icon-rotate-90
+  transform: rotate(90deg)
+
+.icon-spinning
+  animation: icon-spinning 2s infinite linear
