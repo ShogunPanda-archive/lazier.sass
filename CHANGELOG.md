@@ -1,3 +1,7 @@
+### 3.0.1 / 2017-01-28
+
+Bugfix.
+
 ### 3.0.0 / 2017-01-28
 
 Move all files within the lazier folder to allow better usage in Broccoli based deployments.
