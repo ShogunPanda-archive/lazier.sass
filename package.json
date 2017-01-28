@@ -4,8 +4,7 @@
   "description": "A small set of tiny SASS files to avoid repetitive definitions.",
   "main": "main.sass",
   "files": [
-    "main.sass",
-    "modules",
+    "lazier",
     "README.md",
     "CHANGELOG.md"
   ],
