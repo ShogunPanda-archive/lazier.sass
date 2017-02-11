@@ -5,7 +5,7 @@
 
 // This file imports all lazier.sass and normalize.css file inside you stylesheet. Note that you don't need to do this as all file are independent.
 
-@import modules/common-rules
-@import modules/palette
-@import modules/flexbox
-@import normalize
+@import "modules/common-rules";
+@import "modules/palette";
+@import "modules/flexbox";
+@import "normalize";

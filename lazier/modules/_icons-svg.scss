@@ -21,35 +21,43 @@
  * </svg>
  */
 
-@keyframes icon-spinning
-  0%
-    transform: rotate(0deg)
+@keyframes icon-spinning{
+  0%{
+    transform: rotate(0deg);
+  }
 
-  100%
-    transform: rotate(359deg)
+  100%{
+    transform: rotate(359deg);
+  }
+}
 
-.icons-definition
-  display: none
-  position: absolute
-  width: 0
-  height: 0
-  overflow: hidden
+.icons-definition{
+  display: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
 
-.icon
-  display: inline-block
-  vertical-align: middle
-  width: 1.0em
-  height: 1.0em
-  stroke-width: 0
-  stroke: currentColor
-  fill: currentColor
+.icon{
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
 
-.icon-big
-  width: 1.5em
-  height: 1.5em
+.icon-big{
+  width: 1.5em;
+  height: 1.5em;
+}
 
-.icon-rotate-90
-  transform: rotate(90deg)
+.icon-rotate-90{
+  transform: rotate(90deg);
+}
 
-.icon-spinning
-  animation: icon-spinning 2s infinite linear
+.icon-spinning{
+  animation: icon-spinning 2s infinite linear;
+}

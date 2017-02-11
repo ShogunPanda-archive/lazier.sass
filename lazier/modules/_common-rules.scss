@@ -1,0 +1,269 @@
+/*
+ * This file is part of the lazier.sass npm package. Copyright (C) 2016 and above Shogun <shogun@cowtech.it>.
+ * Licensed under the MIT license, which can be found at http://www.opensource.org/licenses/mit-license.php.
+ */
+
+/*
+ * This file defines a series of common case placeholder selectors to make CSS declarative and easy to use.
+ * Selectors can be used by @extend-ing or by importing them in your stylesheets. In the latter case, no additional SASS code is needed. Example:
+ *
+ *   SASS:
+ *     // This goes outside any selector
+ *     @include import-rules(muted, size-1-2 no-margin)
+ *
+ *   HTML:
+ *     <div class="size-1-2 no-margin muted">Ok</div>
+ */
+
+// This is Google Material Design Grey 500
+$custom-color-grey: #9E9E9E !default;
+
+// This is Google Material Design Grey 300
+$custom-color-border: #E0E0E0 !default;
+
+@mixin import-rules($rules...){
+  @each $rule in $rules{
+    .#{$rule}{
+      @extend %#{$rule};
+    }
+  }
+}
+
+// Visibility
+%relative{
+  position: relative;
+}
+
+%muted{
+  color: $custom-color-grey;
+}
+
+// Text
+%truncate-with-ellipsis{
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+%uppercase{
+  text-transform: uppercase;
+}
+
+%no-wrap{
+  white-space: nowrap;
+}
+
+%wrap{
+  white-space: normal;
+}
+
+%break-word{
+  max-width: 100%;
+  display: inline-block;
+  word-wrap: break-word;
+}
+
+%with-pointer{
+  cursor: pointer;
+}
+
+// Size
+%body-size{
+  width: 80%;
+  max-width: 120rem;
+}
+
+@for $i from 1 through 10{
+  %size-1-#{$i}{
+    width: 100% / $i;
+
+    &.with-margin{
+      margin: 1rem;
+      width: calc((100% / #{$i}) - 2rem);
+    }
+  }
+
+  %max-size-1-#{$i}{
+    max-width: 100% / $i;
+
+    &.with-margin{
+      margin: 1rem;
+      max-width: calc((100% / #{$i}) - 2rem);
+    }
+  }
+
+  %min-size-1-#{$i}{
+    min-width: 100% / $i;
+
+    &.with-margin{
+      margin: 1rem;
+      min-width: calc((100% / #{$i}) - 2rem);
+    }
+  }
+}
+
+%size-full{
+  @extend %size-1-1;
+}
+
+// Box model
+%as-block{
+  display: block;
+}
+
+%as-inline-block{
+  display: inline-block;
+}
+
+%align-left{
+  text-align: left;
+}
+
+%align-right{
+  text-align: right;
+}
+
+%align-center{
+  text-align: center;
+}
+
+%horizontal-scroll{
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+%vertical-scroll{
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+@for $i from 0 through 10{
+  $step: 0.5rem * $i;
+
+  %with-margin-#{$i}{
+    margin: $step;
+
+    &.with-border{
+      margin: calc((0.5rem * #{$i}) + 0.1rem);
+    }
+  }
+
+  %with-padding-#{$i}{
+    padding: $step;
+  }
+
+  %with-horizontal-margin-#{$i}{
+    margin-left: $step;
+    margin-right: $step;
+  }
+
+  %with-vertical-margin-#{$i}{
+    margin-top: $step;
+    margin-bottom: $step;
+  }
+
+  %with-horizontal-padding-#{$i}{
+    padding-left: $step;
+    padding-right: $step;
+  }
+
+  %with-vertical-padding-#{$i}{
+    padding-top: $step;
+    padding-bottom: $step;
+  }
+
+  %with-horizontal-border-#{$i}{
+    border-left: #{$i / 10}rem solid $custom-color-border;
+    border-right: #{$i / 10}rem solid $custom-color-border;
+  }
+
+  %with-vertical-border-#{$i}{
+    border-top: #{$i / 10}rem solid $custom-color-border;
+    border-bottom: #{$i / 10}rem solid $custom-color-border;
+  }
+
+  %with-border-#{$i}{
+    border: #{$i / 10}rem solid -color-border;
+  }
+
+  @each $direction in top, bottom, left, right{
+    %with-#{$direction}-margin-#{$i}{
+      margin-#{$direction}: $step;
+
+      &.with-border{
+        margin-#{$direction}: calc((#{$step}) + 0.1rem);
+      }
+    }
+
+    %with-#{$direction}-padding-#{$i}{
+      padding-#{$direction}: $step;
+    }
+
+    %with-#{$direction}-border-#{$i}{
+      border-#{$direction}: #{$i / 10}rem solid $custom-color-border;
+    }
+  }
+}
+
+@each $direction in top, bottom, left, right{
+  %with-#{$direction}-margin{
+    @extend %with-#{$direction}-margin-2;
+  }
+
+  %with-#{$direction}-padding{
+    @extend %with-#{$direction}-padding-2;
+  }
+
+  %with-#{$direction}-border{
+    @extend %with-top-border-1;
+  }
+}
+
+%with-horizontal-margin{
+  @extend %with-horizontal-margin-4;
+}
+
+%with-vertical-margin{
+  @extend %with-vertical-margin-4;
+}
+
+%with-horizontal-padding{
+  @extend %with-horizontal-padding-4;
+}
+
+%with-vertical-padding{
+  @extend %with-vertical-padding-4;
+}
+
+%with-horizontal-border{
+  @extend %with-horizontal-border-1;
+}
+
+%with-vertical-border{
+  @extend %with-vertical-border-1;
+}
+
+%with-margin{
+  @extend %with-margin-4;
+}
+
+%with-padding{
+  @extend %with-padding-4;
+}
+
+%with-border{
+  @extend %with-border-4;
+}
+
+%no-margin{
+  margin: 0;
+}
+
+%no-padding{
+  padding: 0;
+}
+
+%no-border{
+  border: 0;
+}

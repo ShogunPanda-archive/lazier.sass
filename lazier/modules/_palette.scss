@@ -4,18 +4,19 @@
  */
 
 /*
- * This file uses SCSS syntax since there are problems with SASS syntax and newlines.
  * This file defines the entire Google Material Design palette (http://www.google.com/design/spec/style/color.html#ui-palette) and export it with human names in
  * order to make it easy to use them in your stylesheets.
  *
  * Examples:
  *
- *   p
- *     color: 0.1rem solid map-get($palette, grey-300)
+ *   p{
+ *     color: 0.1rem solid map-get($palette, grey-300);
+ *   }
  *
- *   a
- *     color: saturate(map-get($palette, blue-grey-800), 5%)
- *     background-color: unquote("rgba(\#{map-get($raw-palette, grey-500)}, 0.2)")
+ *   a{
+ *     color: saturate(map-get($palette, blue-grey-800), 5%);
+ *     background-color: unquote("rgba(\#{map-get($raw-palette, grey-500)}, 0.2)");
+ *   }
  */
 
 $palette-codes: 50 100 200 300 400 500 600 700 800 900 A100 A200 A400 A700;

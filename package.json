@@ -27,8 +27,8 @@
   },
   "homepage": "https://sw.cowtech.it/lazier.sass",
   "dependencies": {
-    "normalize.css": "^5.0.0",
-    "font-awesome": "^4.0.0",
-    "ribbon.css": "^2.0.0"
+    "normalize.css": "~5.0",
+    "font-awesome": "~4.7",
+    "ribbon.css": "~3.0"
   }
 }

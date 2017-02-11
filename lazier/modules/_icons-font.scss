@@ -1,0 +1,37 @@
+/*
+ * This file is part of the lazier.sass npm package. Copyright (C) 2016 and above Shogun <shogun@cowtech.it>.
+ * Licensed under the MIT license, which can be found at http://www.opensource.org/licenses/mit-license.php.
+ */
+
+/*
+ * This file imports the minimum set of Font Awesome files to define icons in your stylesheets without importing the entire icon set.
+ *
+ * To import a icon:
+ *
+ *   .fa-envelope:before{
+ *     content: $fa-var-envelope;
+ *   }
+ *
+ * It also defines a %icon-base placeholder selector, which can used to define add an icon to elements containing other content:
+ *
+ *   p.with-icon::before{
+ *     @extend %icon-base;
+ *     content: $fa-var-envelope;
+ *   }
+ */
+
+@import "node_modules/font-awesome/scss/_variables";
+@import "node_modules/font-awesome/scss/_mixins";
+@import "node_modules/font-awesome/scss/_rotated-flipped";
+@import "node_modules/font-awesome/scss/_path";
+@import "node_modules/font-awesome/scss/_core";
+
+%icon-base{
+  display: inline-block;
+  font-family: "FontAwesome";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
