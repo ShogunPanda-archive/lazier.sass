@@ -25,19 +25,19 @@ html
 
 ## Examples
 
-~~~sass
+~~~scss
 // ... other imports before ...
-@import node_modules/lazier.sass/lazier/main
+@import "node_modules/lazier.sass/lazier/main";
 // ... other imports after ...
 
 // ... other rules ...
 ~~~
 
-~~~sass
+~~~scss
 // ... other imports before ...
-@import node_modules/normalize.css/normalize
-@import node_modules/lazier.sass/lazier/modules/_palette
-@import node_modules/ribbon.css/_ribbon
+@import "node_modules/normalize.css/normalize";
+@import "node_modules/lazier.sass/lazier/modules/_palette";
+@import "node_modules/ribbon.css/_ribbon";
 // ... other imports after ...
 
 // ... other rules ...
