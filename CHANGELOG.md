@@ -1,30 +1,34 @@
+### 4.1.0 / 2017-02-13
+
+* Added `.loading-fonts` class to body to avoid above-the-fold issues.
+
 ### 4.0.0 / 2017-02-11
 
-Changed to SCSS syntax in order to avoid https://github.com/sass/node-sass/issues/1192.
+* Changed to SCSS syntax in order to avoid https://github.com/sass/node-sass/issues/1192.
 
 ### 3.0.2 / 2017-01-28
 
-Bugfix.
+* Bugfix.
 
 ### 3.0.1 / 2017-01-28
 
-Bugfix.
+* Bugfix.
 
 ### 3.0.0 / 2017-01-28
 
-Move all files within the lazier folder to allow better usage in Broccoli based deployments.
+* Move all files within the lazier folder to allow better usage in Broccoli based deployments.
 
 ### 2.0.3 / 2016-12-16
 
-Bugfix.
+* Bugfix.
 
 ### 2.0.2 / 2016-12-16
 
-Bugfix.
+* Bugfix.
 
 ### 2.0.1 / 2016-12-16
 
-Bugfix.
+* Bugfix.
 
 ### 2.0.0 / 2016-12-16
 
