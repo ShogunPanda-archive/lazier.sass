@@ -1,3 +1,7 @@
+### 4.2.0 / 2017-02-14
+
+* Remove unused classes.
+
 ### 4.1.2 / 2017-02-14
 
 * Replace `hide` with `hidden`.

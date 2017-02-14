@@ -30,18 +30,10 @@
   align-items: $align-items;
   justify-content: $justify-content;
   flex-wrap: $flex-wrap;
-
-  &.hidden{
-    display: none;
-  }
 }
 
 @mixin flex-element($size: 1, $shrink: 0, $basis: auto){
   flex: $size $shrink $basis;
-
-  &.hidden{
-    display: none;
-  }
 }
 
 %flex-container{
