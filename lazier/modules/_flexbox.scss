@@ -75,7 +75,7 @@
 }
 
 @for $i from 1 through 12{
-  .flex-element-#{$i}{
+  %flex-element-#{$i}{
     @include flex-element($i);
   }
 }

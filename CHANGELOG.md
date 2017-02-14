@@ -1,3 +1,7 @@
+### 4.1.1 / 2017-02-14
+
+* Minor fix.
+
 ### 4.1.0 / 2017-02-13
 
 * Added `.loading-fonts` class to body to avoid above-the-fold issues.
