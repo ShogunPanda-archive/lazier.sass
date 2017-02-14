@@ -31,7 +31,7 @@
   justify-content: $justify-content;
   flex-wrap: $flex-wrap;
 
-  &.hide{
+  &.hidden{
     display: none;
   }
 }
@@ -39,7 +39,7 @@
 @mixin flex-element($size: 1, $shrink: 0, $basis: auto){
   flex: $size $shrink $basis;
 
-  &.hide{
+  &.hidden{
     display: none;
   }
 }

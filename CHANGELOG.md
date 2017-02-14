@@ -1,3 +1,7 @@
+### 4.1.2 / 2017-02-14
+
+* Replace `hide` with `hidden`.
+
 ### 4.1.1 / 2017-02-14
 
 * Minor fix.
