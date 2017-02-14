@@ -49,15 +49,15 @@
   fill: currentColor;
 }
 
-.icon-big{
+%icon-big{
   width: 1.5em;
   height: 1.5em;
 }
 
-.icon-rotate-90{
+%icon-rotate-90{
   transform: rotate(90deg);
 }
 
-.icon-spinning{
+%icon-spinning{
   animation: icon-spinning 2s infinite linear;
 }

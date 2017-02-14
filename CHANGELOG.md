@@ -1,3 +1,7 @@
+### 4.3.0 / 2017-02-14
+
+* Never generate classes, only placeholders.
+
 ### 4.2.0 / 2017-02-14
 
 * Remove unused classes.
