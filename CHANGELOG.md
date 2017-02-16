@@ -1,3 +1,7 @@
+### 4.4.0 / 2017-02-16
+
+* Extract `.loading-fonts` class to `%loading-fonts` and `%loading-fonts-universal` placeholders not to generate unused rules by default.
+
 ### 4.3.0 / 2017-02-14
 
 * Never generate classes, only placeholders.
