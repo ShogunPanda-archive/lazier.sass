@@ -1,3 +1,8 @@
+### 2018-06-18 / 4.4.1
+
+* chore: End of development notice.
+* Updated license links and badges.
+
 ### 4.4.0 / 2017-02-16
 
 * Extract `.loading-fonts` class to `%loading-fonts` and `%loading-fonts-universal` placeholders not to generate unused rules by default.
