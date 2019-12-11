@@ -1,12 +1,8 @@
 # lazier.sass
 
+## END OF DEVELOPMENT NOTICE - This package has been discontinued
+
 A small set of tiny SASS files to avoid repetitive definitions.
-
-https://sw.cowtech.it/lazier.sass
-
-## END OF DEVELOPMENT NOTICE
-
-# This module has been discontinued.
 
 ## Usage
 
@@ -31,7 +27,7 @@ html
 
 ```scss
 // ... other imports before ...
-@import "node_modules/lazier.sass/lazier/main";
+@import 'node_modules/lazier.sass/lazier/main';
 // ... other imports after ...
 
 // ... other rules ...
@@ -39,9 +35,9 @@ html
 
 ```scss
 // ... other imports before ...
-@import "node_modules/normalize.css/normalize";
-@import "node_modules/lazier.sass/lazier/modules/_palette";
-@import "node_modules/ribbon.css/_ribbon";
+@import 'node_modules/normalize.css/normalize';
+@import 'node_modules/lazier.sass/lazier/modules/_palette';
+@import 'node_modules/ribbon.css/_ribbon';
 // ... other imports after ...
 
 // ... other rules ...
